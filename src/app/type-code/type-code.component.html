@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <p class="lead">My name is : {{ name }}</p>
+            <p *ngIf="data">My name is : {{ name }}</p>
+            <button (click)="onClick()" class="btn-primary">SHOW</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let abcd of tableData">
+                    <td>{{ abcd.id }}</td>
+                    <td>{{ abcd.name }}</td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+</div>
