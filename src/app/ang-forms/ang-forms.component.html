@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" [formControl]="name">
+            <p *ngIf="name.value !=''; else elseBlock">{{ name.value }}</p>
+            
+             <ng-template #elseBlock>Loading Name...</ng-template>
+            <button (click)="onClick()">Submit</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <table class="table">
+            <tr *ngFor="let datas of data">
+                <td>{{ datas }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
